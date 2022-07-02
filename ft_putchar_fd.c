@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rubutar <rubutar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/02 18:31:55 by rubutar          ###   ########.fr       */
+/*   Created: 2022/07/02 16:52:15 by rubutar           #+#    #+#             */
+/*   Updated: 2022/07/02 18:29:47 by rubutar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <unistd.h>
-#include "ft_putchar_fd.c"
-#include "ft_putchar.c"
-
-int main()
+void    ft_putchar_fd(char c, int fd)
 {
-    ft_putchar_fd('r', 1);
-    ft_putchar('u');
+    write(fd, &c, 1);
 }
