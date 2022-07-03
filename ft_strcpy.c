@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/03 14:11:48 by rbutarbu         ###   ########.fr       */
+/*   Created: 2022/07/03 13:02:10 by rbutarbu          #+#    #+#             */
+/*   Updated: 2022/07/03 16:31:46 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
-#include <unistd.h>
-#include <stdio.h>
-
-void    ft_putchar_fd(char c, int fd);
-void    ft_putstr_fd(char const *s, int fd);
-void    ft_putnbr_fd(int n, int fd);
-void    ft_putchar(char c);
-void    ft_putstr(char const *s);
-void    ft_putnbr(int n);
-size_t     ft_strlen(const char *s);
-
-#endif
+char    *ft_strcpy(char *dest, char *src)
+{
+    int i = 0;
+    while (src[i] != '\0')
+    {
+        dest[i] = src[i];
+        i++;
+    }
+    dest[i] = '\0';
+    return(dest);
+}

@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/03 14:11:48 by rbutarbu         ###   ########.fr       */
+/*   Created: 2022/07/03 11:42:27 by rubutar           #+#    #+#             */
+/*   Updated: 2022/07/03 12:20:52 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#ifndef LIBFT_H
-#define LIBFT_H
+void    ft_putnbr(int n)
+{
+    if (n == -2147483648)
+    {
+        ft_putchar('-');
+        ft_putchar('2');
+        ft_putnbr(147483648);
+    }
 
-#include <unistd.h>
-#include <stdio.h>
+    else if (n < 0)
+    {
+        ft_putchar('-');
+        n = -n;
+        ft_putnbr(n);
+    }
 
-void    ft_putchar_fd(char c, int fd);
-void    ft_putstr_fd(char const *s, int fd);
-void    ft_putnbr_fd(int n, int fd);
-void    ft_putchar(char c);
-void    ft_putstr(char const *s);
-void    ft_putnbr(int n);
-size_t     ft_strlen(const char *s);
+    else if (n > 9)
+    {
+        ft_putnbr(n / 10);
+        ft_putnbr(n % 10);
+    }
 
-#endif
+    else if (n < 9)
+        ft_putchar(n+48);
+}
