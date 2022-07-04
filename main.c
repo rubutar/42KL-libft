@@ -6,6 +6,8 @@
 #include "ft_isalpha.c"
 #include "ft_isdigit.c"
 #include "ft_isalnum.c"
+#include "ft_isascii.c"
+#include "ft_isprint.c"
 
 int main()
 {
@@ -34,4 +36,6 @@ int main()
     printf("102 isalpha : %d \n", ft_isalpha(102));
     printf("50 isdigit : %d \n", ft_isdigit(50));
     printf("50 isalnum : %d \n", ft_isalnum(50));
+    printf("50 isascii : %d \n", ft_isascii(50));
+    printf("50 isprint : %d \n", ft_isascii('d'));
 }

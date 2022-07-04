@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/04 21:58:12 by rbutarbu         ###   ########.fr       */
+/*   Created: 2022/07/04 21:56:36 by rbutarbu          #+#    #+#             */
+/*   Updated: 2022/07/04 21:58:23 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#ifndef LIBFT_H
-#define LIBFT_H
-
-#include <unistd.h>
-#include <stdio.h>
-
-void    ft_putchar_fd(char c, int fd);
-void    ft_putstr_fd(char const *s, int fd);
-void    ft_putnbr_fd(int n, int fd);
-size_t     ft_strlen(const char *s);
-int    ft_isalpha(int c);
-int    ft_isdigit(int c);
-int     ft_isalnum(int c);
-int     ft_isascii(int c);
-int     ft_isprint(int c);
-
-#endif
+int ft_isprint(int c)
+{
+    return (c >= 32 && c <= 126);
+}
