@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/03 11:21:05 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/03 12:21:32 by rbutarbu         ###   ########.fr       */
+/*   Created: 2022/07/04 21:27:50 by rbutarbu          #+#    #+#             */
+/*   Updated: 2022/07/04 21:31:43 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr(char const *s)
+int ft_isalnum(int c)
 {
-    int i = 0;
-    while (s[i] != '\0')
-    {
-        ft_putchar(s[i]);
-        i++;
-    }
-    
-
+    return (ft_isalpha(c) || ft_isdigit(c));
 }

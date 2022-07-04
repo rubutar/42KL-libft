@@ -3,6 +3,9 @@
 #include "ft_strcpy.c"
 #include "ft_strncpy.c"
 #include "ft_strcat.c"
+#include "ft_isalpha.c"
+#include "ft_isdigit.c"
+#include "ft_isalnum.c"
 
 int main()
 {
@@ -27,4 +30,8 @@ int main()
 
     printf("ft_strcat of x4 is %s \n", ft_strcat(x3, y3));
     printf("strcat of x4 is %s\n\n", strcat(x4, y4));
+
+    printf("102 isalpha : %d \n", ft_isalpha(102));
+    printf("50 isdigit : %d \n", ft_isdigit(50));
+    printf("50 isalnum : %d \n", ft_isalnum(50));
 }
