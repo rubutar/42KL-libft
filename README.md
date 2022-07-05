@@ -1,5 +1,5 @@
 # 42KL-libft
-Libft - Your first own library. The aim of this project is to code a C library regrouping usual function that you'll be allowed to use in all your othe projects.
+Libft - My first own library. The aim of this project is to code a C library regrouping usual function that we'll be allowed to use in all our other projects.
 
 ### 42 Course
 
