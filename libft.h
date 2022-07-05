@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/04 21:58:12 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/07/05 17:46:17 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,8 @@ int    ft_isdigit(int c);
 int     ft_isalnum(int c);
 int     ft_isascii(int c);
 int     ft_isprint(int c);
+int     ft_toupper(int c);
+int     ft_tolower(int c);
+size_t     ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
