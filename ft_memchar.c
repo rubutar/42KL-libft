@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 20:10:41 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/08 20:19:14 by rbutarbu         ###   ########.fr       */
+/*   Created: 2022/07/08 20:29:50 by rbutarbu          #+#    #+#             */
+/*   Updated: 2022/07/08 20:33:14 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memset(void *b, int c, size_t len)
+void    *ft_memchar(const void *s, int c, size_t n)
 {
     size_t  i;
 
-    if (!b)
-        return (NULL);
+    if(!s)
+        return(NULL);
     i = 0;
-    while (i < len)
+    while (i < n)
     {
-        *(unsigned char*)(b + i) = (unsigned char)c;
+        if(*(unsigned char*)(s + i) == (unsigned char)c)
+            return ((void*)(s + i));
         i++;
     }
-    return (b);
+    return (NULL);
 }
