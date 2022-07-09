@@ -4,6 +4,7 @@
 #include "ft_memcpy.c"
 #include "ft_memset.c"
 #include "ft_memchar.c"
+#include "ft_bzero.c"
 
 int main(int argc, char *argv[])
 {
@@ -30,10 +31,13 @@ int main(int argc, char *argv[])
     }
 
     ft_memcpy(arr1, arr2, sizeof(int));
-    printf("%08x %d %d\n\n", arr1[0], arr1[1], arr1[2]);
+    printf("%d %d %d\n\n", arr1[0], arr1[1], arr1[2]);
 
-    ft_memset(arr1, 1, 3 * sizeof(int));
-    printf("%08x %d %d\n", arr1[0], arr1[1], arr1[2]);
+    //ft_memset(arr1, 1, 3 * sizeof(int));
+    //printf("%d %d %d\n", arr1[0], arr1[1], arr1[2]);
 
+
+    ft_bzero(arr1, 1 * sizeof(int));
+    printf("after bzero : %d %d %d\n\n", arr1[0], arr1[1], arr1[2]);
     return 0;
 }
