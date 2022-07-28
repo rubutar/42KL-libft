@@ -11,29 +11,33 @@
 # **************************************************************************** #
 
 
-SRCS	= ft_putchar.c ft_putstr.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c
-			ft_strlen.c
+SRCS			= ft_atoi.c
+OBJS			= $(SRCS:.c=.o)
 
-OBJS	= $(SRCS:.c=.o)
+# BONUS	= 
+# BONUS_OBJS	=
 
-CC		= gcc
-rm		= rm -f
-CFLAGS	= -Wall -Wextra -Werror -std=c99
+CC				= gcc
+RM				= rm -f
+CFLAGS			= -Wall -Wextra -Werror -I.
 
-NAME	= libft.a
+NAME			= libft.a
 
-all:		$(NAME)
+all:			$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):		$(OBJS)
 					ar rcs $(NAME) $(OBJS)
 
 
 clean:
-	$(RM) $(OBJS)
+					$(RM) $(OBJS)
 
-fclean:		clean
-				$(RM) $(NAME)
+fclean:			clean
+					$(RM) $(NAME)
 
 re:				fclean $(NAME)
+
+# bonus:			$(OBJS) $(BONUS_OBJS)
+# 					ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY:		all clean fclean re
