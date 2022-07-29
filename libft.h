@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/05 17:46:17 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/07/28 20:29:52 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-int     ft_atoi(const char *str)
+int     ft_atoi(const char *str);
 
 
 // void    ft_putchar_fd(char c, int fd);

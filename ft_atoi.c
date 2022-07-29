@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 15:52:28 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/12 15:52:28 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/07/28 20:29:40 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int   ft_atoi(const char *str)
 
    if (!str)
       return (0);
-   i = 0
+   i = 0;
    while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
       i++;
    
