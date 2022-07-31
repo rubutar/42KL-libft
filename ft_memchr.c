@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 08:44:19 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/30 12:27:54 by rbutarbu         ###   ########.fr       */
+/*   Created: 2022/07/08 20:29:50 by rbutarbu          #+#    #+#             */
+/*   Updated: 2022/07/30 20:39:10 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-
-static int
-	cmp_char(char c1, char c2)
-{
-	if ((unsigned char)c1 != (unsigned char)c2)
-		return ((unsigned char)c1 - (unsigned char)c2);
-	return (0);
-}
-
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
     size_t  i;
-    i   = 0;
 
-    while (s1[i] && s2[i] && i < n)
-	{
-		if (cmp_char(s1[i], s2[i]))
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	if (i < n)
-		return (cmp_char(s1[i], s2[i]));
-	return (0);
+    if(!s)
+        return(NULL);
+    i = 0;
+    while (i < n)
+    {
+        if(*(unsigned char*)(s + i) == (unsigned char)c)
+            return ((void*)(s + i));
+        i++;
+    }
+    return (NULL);
 }

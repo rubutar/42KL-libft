@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 08:44:19 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/30 12:27:54 by rbutarbu         ###   ########.fr       */
+/*   Created: 2022/07/31 08:44:46 by rbutarbu          #+#    #+#             */
+/*   Updated: 2022/07/31 08:49:15 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-static int
-	cmp_char(char c1, char c2)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if ((unsigned char)c1 != (unsigned char)c2)
-		return ((unsigned char)c1 - (unsigned char)c2);
-	return (0);
-}
+    size_t	i;
+	size_t	j;
+	char	*str;
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-    size_t  i;
-    i   = 0;
-
-    while (s1[i] && s2[i] && i < n)
+	str = (char*)malloc(sizeof(*s) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
 	{
-		if (cmp_char(s1[i], s2[i]))
-			return (s1[i] - s2[i]);
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
 		i++;
 	}
-	if (i < n)
-		return (cmp_char(s1[i], s2[i]));
-	return (0);
+	str[j] = 0;
+	return (str);
+    
 }
