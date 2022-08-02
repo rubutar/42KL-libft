@@ -6,17 +6,33 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/02 17:49:14 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:36:09 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <string.h>
+#include "libft.h"
+
+int	min(int a, int b) {
+	return ((a < b) ? a : b);
+}
+
+int	max(int a, int b) {
+	return ((a > b) ? a : b);
+}
 
 
-int main()
+
+int main(int argc, char const *argv[])
 {
+	(void) argc;
+	(void) argv;
 
     printf("isalpha = %d\n", ft_isalpha('A'));
     printf("isascii = %d\n", ft_isascii(127));
@@ -48,8 +64,38 @@ int main()
     char stratoi[] = "    -58852 4";
     printf("\n ++atoi++ dari %s adalah %d\n", stratoi, ft_atoi(stratoi));
 
+    char b[] = "apadah";
+    char *ptrmemset = NULL;
+    ptrmemset = ft_memset(b, 'c', 3);
+    printf("ft_memset dari %s adalah %s\n ", b, ptrmemset);
+    
+	/*
+	bzero
+	*/
+	printf("\n---bzero---[string|length]\n");
 
+	char *str_bzero_org = NULL;
+	char *str_bzero_ft = NULL;
+	int	min_length;
 
+	int i = 0;
+	while (i < argc) {
+		str_bzero_org = strdup(argv[i]);
+		str_bzero_ft = strdup(argv[i]);
+		min_length = min(strlen(argv[i]), 5);
+		bzero(str_bzero_org, min_length);
+		ft_bzero((void*)str_bzero_ft, min_length);
+		if (memcmp(str_bzero_org, str_bzero_ft, min_length) == 0)
+			printf("G");
+		else
+			printf("[%s|%d]", argv[i], min_length);
+		free(str_bzero_org);
+		free(str_bzero_ft);
+		i++;
+	}
+	printf("\n");
+
+    
     // /*
 	// memchr
 	// */

@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/02 18:58:59 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 21:18:00 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int     ft_isdigit(int c);
 int     ft_isprint(int c);
 size_t  ft_strlen(const char *s);
 void    *ft_memset(void *b, int c, size_t len);
+void    ft_bzero(void *s, size_t n);
 int     ft_toupper(int c);
 int     ft_tolower(int c);
 char    *ft_strchr(const char *s, int c);

@@ -6,9 +6,11 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 20:10:41 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/08/02 17:45:41 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 21:12:03 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void    *ft_memset(void *b, int c, size_t len)
 {
