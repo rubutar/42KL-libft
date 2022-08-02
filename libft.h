@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/02 17:45:57 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 18:58:59 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-// Part i - Libc functions
+// Part 1 - Libc functions
 int     ft_isalpha(int c);
 int     ft_isascii(int c);
 int     ft_isalnum(int c);
