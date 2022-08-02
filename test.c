@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/02 17:25:53 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 17:49:14 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ int main()
     printf("isalnum = %d\n", ft_isdigit(48));
     printf("isdigit = %d\n", ft_isdigit(48));
     printf("isprint = %d\n", ft_isprint(126));
+
+    printf("toupper = %c\n", ft_toupper('a'));
+    printf("tolower = %c\n", ft_tolower('A'));
+
+    // printf("memset = %p\n", ft_memset("buku", 'A', 2));
 
  
     ft_putchar_fd('r', 1);
