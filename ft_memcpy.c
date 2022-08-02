@@ -6,9 +6,11 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 19:46:10 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/08 20:15:49 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 23:41:55 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void    *ft_memcpy(void *dst, const void *src, size_t n)
 {

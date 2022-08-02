@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/02 22:36:09 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/03 00:53:58 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,42 @@ int main(int argc, char const *argv[])
     ptrmemset = ft_memset(b, 'c', 3);
     printf("ft_memset dari %s adalah %s\n ", b, ptrmemset);
     
+    printf("=====***** ft_memcpy *****=====\n");
+    char dest[] = "copy";
+    char src[] = "here";
+    int len = 2;
+    printf("ft_memcpy dest : %s, src : %s, len : %d\n ", dest, src, len);
+    ft_memcpy(dest, src, len);
+    printf("maka dest jadi : %s\n ", dest);
+    printf("=====***** ft_memcpy *****=====\n\n\n");
+
+    printf("=====***** ft_memmove *****=====\n");
+    char dest1[] = "copy";
+    char src1[] = "here";
+    int len1 = 2;
+    printf("ft_memmove dest1 : %s, src1 : %s, len1 : %d\n ", dest1, src1, len1);
+    ft_memmove(dest1, src1, len1);
+    printf("maka dest1 jadi : %s\n ", dest1);
+    printf("=====***** ft_memmove *****=====\n\n\n");
+
+    printf("=====***** ft_strlcpy *****=====\n");
+    char dest2[] = "copy";
+    char src2[] = "here";
+    int len2 = 3;
+    printf("dest2 : %s, src2 : %s, len2 : %d\n ", dest2, src2, len2);
+    ft_strlcpy(dest2, src2, len2);
+    printf("maka dest2 jadi : %s\n ", dest2);
+    printf("=====***** ft_strlcpy *****=====\n\n\n");
+
+    printf("=====***** ft_memchr *****=====\n");
+    
+    char dest3[] = "abcdeeef";
+    printf("dest3 = %s || lookin for char |c|\n", dest3);
+    char *ret = ft_memchr(dest3, 'c', 1);
+	printf("ret = %s\n", ret);
+    
+    printf("=====***** ft_memchr *****=====\n\n\n");
+
 	/*
 	bzero
 	*/

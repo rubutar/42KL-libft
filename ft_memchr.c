@@ -6,9 +6,11 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 20:29:50 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/30 20:39:10 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/03 00:31:29 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void    *ft_memchr(const void *s, int c, size_t n)
 {
