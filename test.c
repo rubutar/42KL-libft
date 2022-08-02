@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/31 10:30:30 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 17:09:51 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ int main()
     printf("%s\n", ft_substr("stringku", 2, 3));
     printf("%zu\n", ft_strlen("stringku"));
     printf("%s\n", ft_strjoin("stringku", "aja"));
+    printf("%s\n", ft_strtrim("aku mau apa aja", "aja"));
+
+    char stratoi[] = "    -58852 4";
+    printf("\n ++atoi++ dari %s adalah %d\n", stratoi, ft_atoi(stratoi));
 
 
 

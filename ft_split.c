@@ -1,4 +1,19 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/02 16:36:56 by rbutarbu          #+#    #+#             */
+/*   Updated: 2022/08/02 16:42:01 by rbutarbu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+// #include "libft.h"
+
+
 
 static char
 	**ft_alloc_split(char const *s, char c)
@@ -87,4 +102,9 @@ char
 	if (!ft_split_by_char(split, s, c))
 		return (NULL);
 	return (split);
+}
+
+int	main()
+{
+	printf("%s[1]", ft_split("maukemana", "k"));
 }

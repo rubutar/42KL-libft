@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/07/31 09:56:54 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 17:05:41 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ char    *ft_substr(char const *s, unsigned int start, size_t len);
 void    ft_putchar_fd(char c, int fd);
 void    ft_putnbr_fd(int n, int fd);
 void    ft_putstr_fd(char const *s, int fd);
+char	*ft_strtrim(char const *s1, char const *set);
+int     ft_atoi(const char *str);
+
 // void    *ft_memchr(const void *s, int c, size_t n);
 
 

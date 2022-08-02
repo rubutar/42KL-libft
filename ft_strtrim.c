@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include libft.h
-#include <stdlib.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
-static int
-	ft_char_in_set(char c, char const *set)
+static int	ft_char_in_set(char c, char const *set)
 {
 	size_t	i;
 
@@ -29,8 +26,7 @@ static int
 	return (0);
 }
 
-char
-	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	size_t	i;
@@ -51,9 +47,4 @@ char
 		str[i++] = s1[start++];
 	str[i] = 0;
 	return (str);
-}
-
-int main()
-{
-    ft_strtrim("          aku mau kamu            ", "a");
 }

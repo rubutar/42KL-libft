@@ -6,14 +6,15 @@
 #    By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/02 21:32:49 by rubutar           #+#    #+#              #
-#    Updated: 2022/07/31 09:58:35 by rbutarbu         ###   ########.fr        #
+#    Updated: 2022/08/02 17:04:25 by rbutarbu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS			= ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
+SRCS			= 	ft_atoi.c \
+					ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 					ft_putchar_fd.c ft_putstr_fd.c  ft_putnbr_fd.c \
-					ft_strchr.c ft_strjoin.c ft_strlen.c ft_strncmp.c ft_strrchr.c \
+					ft_strchr.c ft_strjoin.c ft_strlen.c ft_strncmp.c ft_strrchr.c ft_strtrim.c\
 					ft_substr.c
 					
 OBJS			= $(SRCS:.c=.o)

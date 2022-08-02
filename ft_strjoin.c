@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include "ft_strlen.c"
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -34,14 +32,9 @@ char *ft_strjoin(char const *s1, char const *s2)
     i = 0;
     while (s2[i])
     {
-        str[j++] = s2[i];
+	str[j++] = s2[i];
         i++;
     }
     str[j] = 0;
     return (str);
-}
-
-int main()
-{
-    printf("%s", ft_strjoin("dia", "adalah"));
 }
