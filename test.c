@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/02 17:09:51 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/02 17:25:53 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int main()
 
     printf("isalpha = %d\n", ft_isalpha('A'));
     printf("isascii = %d\n", ft_isascii(127));
+    printf("isalnum = %d\n", ft_isdigit(48));
     printf("isdigit = %d\n", ft_isdigit(48));
     printf("isprint = %d\n", ft_isprint(126));
 
