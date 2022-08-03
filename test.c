@@ -168,7 +168,29 @@ int main(int argc, char const *argv[])
 
     printf("=====***** ft_calloc *****=====\n");
     
-    
+    char	*str_calloc = NULL;
+	int		length = 0;
+
+	i = 0;
+	while (i < argc) {
+		length = strlen(argv[i]) + 1;
+		str_calloc = (char*)ft_calloc(length, sizeof(*str_calloc));
+		if (str_calloc)
+		{
+			j = 0;
+			while (j < length)
+				if (str_calloc[j++])
+					break ;
+			if (j == length)
+				printf("G");
+			else
+				printf("[content:%s:%d/%d]", argv[i], j, length);
+			free(str_calloc);
+		}
+		else
+			printf("[malloc:%s:%d]", argv[i], length);
+		str_calloc = NULL;
+		i++;
     
     
     
