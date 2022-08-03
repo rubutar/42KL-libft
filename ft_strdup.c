@@ -6,12 +6,11 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 22:27:59 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/10 09:29:29 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/03 13:26:10 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_strlen.c"
 
 char    *ft_strdup(const char *s1)
 {

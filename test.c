@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/03 12:51:10 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/03 13:39:12 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,7 +158,7 @@ int main(int argc, char const *argv[])
 		bzero(str_bzero_org, min_length);
 		ft_bzero((void*)str_bzero_ft, min_length);
 		if (memcmp(str_bzero_org, str_bzero_ft, min_length) == 0)
-			printf("G");
+			printf("G\n\n");
 		else
 			printf("[%s|%d]", argv[i], min_length);
 		free(str_bzero_org);
@@ -177,12 +177,12 @@ int main(int argc, char const *argv[])
 		str_calloc = (char*)ft_calloc(length, sizeof(*str_calloc));
 		if (str_calloc)
 		{
-			j = 0;
+			int j = 0;
 			while (j < length)
 				if (str_calloc[j++])
 					break ;
 			if (j == length)
-				printf("G");
+				printf("\nG\n\n");
 			else
 				printf("[content:%s:%d/%d]", argv[i], j, length);
 			free(str_calloc);
@@ -191,8 +191,16 @@ int main(int argc, char const *argv[])
 			printf("[malloc:%s:%d]", argv[i], length);
 		str_calloc = NULL;
 		i++;
-    
-    
-    
+    }       
     printf("=====***** ft_calloc *****=====\n\n\n");
+
+    printf("=====***** ft_strdup *****=====\n");
+    
+    char *src6;
+    src6 = "this word will be duplicated";
+    
+    printf("src6 = %s || dest6 = %s\n", src6, ft_strdup(src6));
+    
+    printf("=====***** ft_strdup *****=====\n\n\n");
+
 }
