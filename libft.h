@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 21:29:47 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/03 13:25:49 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/03 22:29:08 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,26 +42,13 @@ int     ft_atoi(const char *str);
 void    *ft_calloc(size_t count, size_t size);
 char    *ft_strdup(const char *s1);
 
-char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
-void    ft_putchar_fd(char c, int fd);
-void    ft_putnbr_fd(int n, int fd);
-void    ft_putstr_fd(char const *s, int fd);
+char    *ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-
-
-// void    *ft_memchr(const void *s, int c, size_t n);
-
-
-//char    *ft_strcat(char *dest, char *src);
-
-// size_t     ft_strlen(const char *s);
-// 
-// int     ft_isdigit(int c);
-// 
-// int     ft_isascii(int c);
-// int     ft_isprint(int c);
-
-// size_t     ft_strlcpy(char *dst, const char *src, size_t size);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char const *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
 
 #endif

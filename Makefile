@@ -6,7 +6,7 @@
 #    By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/02 21:32:49 by rubutar           #+#    #+#              #
-#    Updated: 2022/08/03 13:26:07 by rbutarbu         ###   ########.fr        #
+#    Updated: 2022/08/03 22:36:08 by rbutarbu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRCS			= 	ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 					ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c \
 					ft_calloc.c ft_strdup.c\
 					\
-					ft_substr.c ft_strjoin.c ft_strtrim.c\
+					ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c\
+					ft_itoa.c \
 					ft_putchar_fd.c ft_putstr_fd.c  ft_putnbr_fd.c \
 					
 					

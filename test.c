@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/03 13:39:12 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/03 22:36:39 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,13 +194,35 @@ int main(int argc, char const *argv[])
     }       
     printf("=====***** ft_calloc *****=====\n\n\n");
 
-    printf("=====***** ft_strdup *****=====\n");
-    
+
+    printf("=====***** ft_strdup *****=====\n");    
     char *src6;
     src6 = "this word will be duplicated";
-    
     printf("src6 = %s || dest6 = %s\n", src6, ft_strdup(src6));
-    
     printf("=====***** ft_strdup *****=====\n\n\n");
+
+
+
+    printf("\n\n==================================================\n");
+    printf("\n========= Part 2 - Additional Function ===========\n");
+    printf("\n==================================================\n\n\n");
+
+
+
+    printf("=====***** ft_split *****=====\n");
+    const char *spl = "123456";
+    char splchr = '3';
+    printf("when you try to split |%s| by char |%c|\n", spl, splchr);
+	char * * tab = ft_split(spl, splchr);
+	printf("result is %s and %s\n", tab[0], tab[1]);
+    printf("=====***** ft_split *****=====\n\n\n");
+
+
+    printf("=====***** ft_itoa *****=====\n");
+    int n = -122625;
+    char *nstr = ft_itoa(n);
+    printf("string of |%d| is |%s| \n", n, nstr);
+    printf("=====***** ft_itoa *****=====\n\n\n");
+
 
 }
