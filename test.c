@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/03 00:53:58 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/03 12:51:10 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,18 +96,53 @@ int main(int argc, char const *argv[])
     printf("maka dest2 jadi : %s\n ", dest2);
     printf("=====***** ft_strlcpy *****=====\n\n\n");
 
+    printf("=====***** ft_strlcat *****=====\n");
+    char dest5[] = "copy";
+    char src5[] = "here";
+    int len5 = 3;
+    printf("dest5 : %s, src5 : %s, len5 : %d\n ", dest5, src5, len5);
+    printf("strlcat : %ld \n", ft_strlcat(dest5, src5, len5));
+    printf("=====***** ft_strlcat *****=====\n\n\n");
+
     printf("=====***** ft_memchr *****=====\n");
-    
     char dest3[] = "abcdeeef";
-    printf("dest3 = %s || lookin for char |c|\n", dest3);
-    char *ret = ft_memchr(dest3, 'c', 1);
+    int c = 'c';
+    int d = 1;
+    printf("dest3 = %s || lookin for char |%c| in %d bit\n", dest3, c, d);
+    char *ret = ft_memchr(dest3, c, 1);
 	printf("ret = %s\n", ret);
     
     printf("=====***** ft_memchr *****=====\n\n\n");
 
-	/*
-	bzero
-	*/
+    printf("=====***** ft_memcmp *****=====\n");
+    char dest4[] = "abcdeeef";
+    char src4[] = "abcdff";
+    int c4 = 5;
+    
+    if ((ft_memcmp(dest4, src4, c4)) == 0)
+    {
+        printf("string = %s || IS SAME compared to |%s| in %d bit\n", dest4, src4, c4);
+    }
+    else
+    {
+        printf("string = %s || NOT SAME compared to |%s| in %d bit\n", dest4, src4, c4);
+    }   
+    printf("=====***** ft_memcmp *****=====\n\n\n");
+
+
+
+    printf("=====***** ft_strnstr *****=====\n");
+    char *needle = "came";
+    char *haystack = "la da\ndoo a da\nnow here comes the stack\nok there it was.\n";
+    size_t c5 = ft_strlen(haystack);
+
+    printf("%sfound: |%s| using strstr\n", strstr(haystack, needle) ? "yes " : "no ", needle);
+    printf("%sfound: |%s| using ft_strnstr\n", ft_strnstr(haystack, needle, c5) ? "yes " : "no ", needle);
+
+    printf("=====***** ft_strnstr *****=====\n\n\n");
+
+	
+    
 	printf("\n---bzero---[string|length]\n");
 
 	char *str_bzero_org = NULL;
@@ -115,7 +150,8 @@ int main(int argc, char const *argv[])
 	int	min_length;
 
 	int i = 0;
-	while (i < argc) {
+	while (i < argc) 
+    {
 		str_bzero_org = strdup(argv[i]);
 		str_bzero_ft = strdup(argv[i]);
 		min_length = min(strlen(argv[i]), 5);
@@ -129,37 +165,12 @@ int main(int argc, char const *argv[])
 		free(str_bzero_ft);
 		i++;
 	}
-	printf("\n");
 
-    
-    // /*
-	// memchr
-	// */
-	// printf("\n---memchr---[string|memchr|yours]\n");
-
-	// i = 0;
-	// while (i < argc) {
-	// 	if (memchr(argv[i], 'c', 50) == ft_memchr(argv[i], 'c', 50)) {
-	// 		printf("G");
-	// 	} else {
-	// 		printf("[%s|%p|%p]", argv[i], memchr(argv[i], 'c', 50), ft_memchr(argv[i], 'c', 50));
-	// 	}
-	// 	i++;
-	// }
-	// printf("\n");
-
-
-
-    // printf("%d\n", ft_memchar("R2DSaaaaaa", 'D', 4));
-    // printf("%d\n", memchr("R2DSaaaaaa", 'D', 4));
-
-
+    printf("=====***** ft_calloc *****=====\n");
     
     
-
-    //ft_strcat.c("mau", "apa");
     
-    // ft_putnbr(-214);
-    // ft_putnbr_fd(-4244, 1);
-    //printf("length of string =akumau= is %d", ft_strlen("akumau"));
+    
+    
+    printf("=====***** ft_calloc *****=====\n\n\n");
 }
