@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 22:37:13 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/08/06 11:22:12 by rbutarbu         ###   ########.fr       */
+/*   Created: 2022/08/06 13:38:19 by rbutarbu          #+#    #+#             */
+/*   Updated: 2022/08/06 13:38:44 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void
+	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	*str;
-	size_t	i;
+	t_list	*tmp;
 
-	if (!(str = ft_strdup(s)))
-		return (NULL);
-	i = 0;
-	while (str[i])
+	if (!del || !lst || !*lst)
+		return ;
+	while (lst && *lst)
 	{
-		str[i] = (*f)(i, str[i]);
-		i++;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
-	return (str);
 }

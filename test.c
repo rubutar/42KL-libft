@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/03 22:36:39 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 13:23:01 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <string.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <string.h>
 #include "libft.h"
 
 int	min(int a, int b) {
@@ -27,6 +26,12 @@ int	max(int a, int b) {
 	return ((a > b) ? a : b);
 }
 
+char strupper_and_one(unsigned int idx, char c) {
+	if (idx == 0) {
+		return ('1');
+	}
+	return (ft_toupper(c));
+    }
 
 
 int main(int argc, char const *argv[])
@@ -223,6 +228,66 @@ int main(int argc, char const *argv[])
     char *nstr = ft_itoa(n);
     printf("string of |%d| is |%s| \n", n, nstr);
     printf("=====***** ft_itoa *****=====\n\n\n");
+
+
+
+
+
+    printf("=====***** ft_strmapi *****=====\n");
+
+    char *str_mapi_ft = NULL;
+	int all_upper;
+
+	i = 0;
+	while (i < argc) {
+		str_mapi_ft = ft_strmapi(argv[i], &strupper_and_one);
+		all_upper = 1;
+		int j = 0;
+		while (str_mapi_ft[j])
+		{
+			if (islower(str_mapi_ft[j++]))
+			{
+				all_upper = 0;
+				break ;
+			}
+		}
+		if ((str_mapi_ft[0] == '1' || strlen(str_mapi_ft) == 0) && all_upper)
+			// printf("G");
+            printf("[%s|%s] G", argv[i], str_mapi_ft);
+		else
+			printf("[%s|%s]", argv[i], str_mapi_ft);
+		i++;
+	}
+	printf("\n");
+
+    printf("=====***** ft_strmapi *****=====\n\n\n");
+
+
+    printf("=====***** ft_strteri *****=====\n");
+    
+   
+
+    
+    printf("=====***** ft_strteri *****=====\n\n\n");
+
+    printf("=====***** ft_putendl *****=====\n");
+    
+
+	ft_putendl_fd("abcdef", 1);
+   
+
+    
+    printf("=====***** ft_putendl *****=====\n\n\n");
+
+
+printf("________________________________________________________________________________________________________\n");
+
+printf("_____________________________________________B.O.N.U.S__________________________________________________\n");
+
+printf("________________________________________________________________________________________________________\n");
+
+
+
 
 
 }

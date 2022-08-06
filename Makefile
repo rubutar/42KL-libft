@@ -6,7 +6,7 @@
 #    By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/02 21:32:49 by rubutar           #+#    #+#              #
-#    Updated: 2022/08/03 22:36:08 by rbutarbu         ###   ########.fr        #
+#    Updated: 2022/08/06 13:19:20 by rbutarbu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,36 +20,42 @@ SRCS			= 	ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 					ft_calloc.c ft_strdup.c\
 					\
 					ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c\
-					ft_itoa.c \
-					ft_putchar_fd.c ft_putstr_fd.c  ft_putnbr_fd.c \
+					ft_itoa.c ft_strmapi.c\
+					ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 					
-					
-OBJS			= $(SRCS:.c=.o)
+NAME				= libft.a
+CC					= gcc
+CC_FLAGS			= -Wall -Wextra -Werror
+RM					= rm -f
 
-# BONUS	= 
-# BONUS_OBJS	=
+OBJS_DIR = objs/
+OBJS = $(SRCS:.c=.o)
+OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
 
-CC				= gcc
-RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+OBJSB = $(SRCSB:.c=.o)
+OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
 
-NAME			= libft.a
+$(OBJS_DIR)%.o : %.c libft.h
+	@mkdir -p $(OBJS_DIR)
+	@echo "Compiling: $<"
+	@clang $(CC_FLAGS) -c $< -o $@
 
-all:			$(NAME)
+$(NAME): $(OBJECTS_PREFIXED)
+	@ar rcs $(NAME) $(OBJECTS_PREFIXED)
+	@echo "Libft Done !"
 
-$(NAME):		$(OBJS)
-					ar rcs $(NAME) $(OBJS)
-
+all: $(NAME)
 
 clean:
-					$(RM) $(OBJS)
+	rm -rf $(OBJS_DIR)
 
-fclean:			clean
-					$(RM) $(NAME)
+fclean: clean
+	rm -f $(NAME)
 
-re:				fclean $(NAME)
+re: fclean all
 
-# bonus:			$(OBJS) $(BONUS_OBJS)
-# 					ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus: $(OBJECTS_BONUS_PREFIXED)
+	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
+	@echo "Libft Bonus Done !"
 
-.PHONY:		all clean fclean re
+.PHONY: bonus all clean fclean re

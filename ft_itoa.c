@@ -6,20 +6,18 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 22:26:59 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/08/03 22:29:27 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 10:18:00 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int
-	ft_abs(int nbr)
+static int	ft_abs(int nbr)
 {
 	return ((nbr < 0) ? -nbr : nbr);
 }
 
-static void
-	ft_strrev(char *str)
+static void	ft_strrev(char *str)
 {
 	size_t	length;
 	size_t	i;

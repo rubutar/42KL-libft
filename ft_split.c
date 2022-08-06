@@ -6,11 +6,12 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 16:36:56 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/08/03 20:06:26 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 09:19:57 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 
 int	ft_str_count(char const *s, char c)
 {
