@@ -6,13 +6,13 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 21:37:19 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/30 10:21:54 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 15:04:59 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    return(c >= 0 && c <= 127);
+	return (c >= 0 && c <= 127);
 }

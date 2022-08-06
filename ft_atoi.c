@@ -6,29 +6,35 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 15:52:28 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/08/02 17:03:52 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 14:47:05 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int   ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-   int   i;
-   int   is_neg;
-   int   res;
+	long int	nbr;
+	int			is_neg;
+	int			i;
 
-   if (!str)
-      return (0);
-   i = 0;
-   while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
-      i++;
-   
-   is_neg = (str[i] == '-') ? -1 : 1;
-   if (is_neg == -1 || str[i] == '+')
-      i++;
-   res = 0;
-   while (str[i] >= '0' && str[i] <= '9')
-      res = (res * 10) + (str[i++] - '0');
-   return (res * is_neg);
+	i = 0;
+	is_neg = 1;
+	nbr = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i++] == '-')
+			is_neg = -1;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{	
+		nbr = (nbr * 10) + (str[i++] - '0');
+		if (nbr * is_neg > 2147483647)
+			return (-1);
+		if (nbr * is_neg < -2147483648)
+			return (0);
+	}
+	return (nbr * is_neg);
 }

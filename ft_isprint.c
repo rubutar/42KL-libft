@@ -6,13 +6,13 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 21:56:36 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/04 21:58:23 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 15:05:46 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

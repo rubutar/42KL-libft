@@ -6,13 +6,13 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 21:20:29 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/07/04 21:21:42 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 15:03:10 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }
