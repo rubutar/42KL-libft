@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/06 17:18:32 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 17:49:40 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,16 +94,41 @@ printf("________________________________________________________________________
     printf("then dest1 will be : | %s |\n ", dest1);
 
     printf("=====***** strlen, memset, bzero, memcpy, memmove =====*****\n\n\n");
-	
 
 
+    printf("\n\n=====***** strlcpy, strlcat, toupper, tolower =====*****\n");
+    
+    char dest2[] = "copy";
+    char src2[] = "here";
+    int len2 = 3;
+    printf(">> ft_strlcpy dest2 : %s, src2 : %s, len2 : %d\n ", dest2, src2, len2);
+    ft_strlcpy(dest2, src2, len2);
+    printf("then dest2 would be : %s\n ", dest2);
 
-//     printf("toupper = %c\n", ft_toupper('a'));
-//     printf("tolower = %c\n", ft_tolower('A'));
+    char dest5[] = "copy";
+    char src5[] = "here";
+    int len5 = 3;
+    printf(">> ft_strlcat dest5 : %s, src5 : %s, len5 : %d\n ", dest5, src5, len5);
+    printf("strlcat : %ld \n", ft_strlcat(dest5, src5, len5));
+    
 
-//     // printf("memset = %p\n", ft_memset("buku", 'A', 2));
+    char mylow = 'c';
+    char mycap = 'C';
+    printf(">> ft_toupper |%c| = %c\n", mylow, ft_toupper(mylow));
+    printf(">> ft_tolower |%c| = %c\n", mycap, ft_tolower(mycap));
+    printf("=====***** strlcpy, strlcat, toupper, tolower =====*****\n\n\n");
 
+
+    printf("\n\n=====***** strchr, strrchr, strncmp, memchr =====*****\n");
+
+    printf("=====***** strchr, strrchr, strncmp, memchr =====*****\n\n\n");
  
+    printf("\n\n=====***** memchr, memcmp, strnstr, atoi =====*****\n");
+
+    printf("=====***** memchr, memcmp, strnstr, atoi =====*****\n\n\n");
+
+
+
 //     ft_putchar_fd('r', 1);
 //     ft_putstr_fd("\n hey there, it's me\n", 1);
 //     ft_putnbr_fd(-2147483648, 1);
@@ -120,23 +145,6 @@ printf("________________________________________________________________________
 
 //     char stratoi[] = "    -58852 4";
 //     printf("\n ++atoi++ dari %s adalah %d\n", stratoi, ft_atoi(stratoi));
-
-//     printf("=====***** ft_strlcpy *****=====\n");
-//     char dest2[] = "copy";
-//     char src2[] = "here";
-//     int len2 = 3;
-//     printf("dest2 : %s, src2 : %s, len2 : %d\n ", dest2, src2, len2);
-//     ft_strlcpy(dest2, src2, len2);
-//     printf("maka dest2 jadi : %s\n ", dest2);
-//     printf("=====***** ft_strlcpy *****=====\n\n\n");
-
-//     printf("=====***** ft_strlcat *****=====\n");
-//     char dest5[] = "copy";
-//     char src5[] = "here";
-//     int len5 = 3;
-//     printf("dest5 : %s, src5 : %s, len5 : %d\n ", dest5, src5, len5);
-//     printf("strlcat : %ld \n", ft_strlcat(dest5, src5, len5));
-//     printf("=====***** ft_strlcat *****=====\n\n\n");
 
 //     printf("=====***** ft_memchr *****=====\n");
 //     char dest3[] = "abcdeeef";
@@ -175,30 +183,6 @@ printf("________________________________________________________________________
 
 //     printf("=====***** ft_strnstr *****=====\n\n\n");
 
-	
-    
-// 	printf("\n---bzero---[string|length]\n");
-
-// 	char *str_bzero_org = NULL;
-// 	char *str_bzero_ft = NULL;
-// 	int	min_length;
-
-// 	int i = 0;
-// 	while (i < argc) 
-//     {
-// 		str_bzero_org = strdup(argv[i]);
-// 		str_bzero_ft = strdup(argv[i]);
-// 		min_length = min(strlen(argv[i]), 5);
-// 		bzero(str_bzero_org, min_length);
-// 		ft_bzero((void*)str_bzero_ft, min_length);
-// 		if (memcmp(str_bzero_org, str_bzero_ft, min_length) == 0)
-// 			printf("G\n\n");
-// 		else
-// 			printf("[%s|%d]", argv[i], min_length);
-// 		free(str_bzero_org);
-// 		free(str_bzero_ft);
-// 		i++;
-// 	}
 
 //     printf("=====***** ft_calloc *****=====\n");
     
