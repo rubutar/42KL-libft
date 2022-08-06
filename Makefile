@@ -6,7 +6,7 @@
 #    By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/02 21:32:49 by rubutar           #+#    #+#              #
-#    Updated: 2022/08/06 13:19:20 by rbutarbu         ###   ########.fr        #
+#    Updated: 2022/08/06 14:07:12 by rbutarbu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,11 @@ SRCS			= 	ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c \
 					\
 					ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c\
 					ft_itoa.c ft_strmapi.c\
-					ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+					ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+
+SRCSB			=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c\
+					ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c\
+					ft_lstclear.c ft_lstiter.c ft_lstmap.c
 					
 NAME				= libft.a
 CC					= gcc
@@ -55,7 +59,7 @@ fclean: clean
 re: fclean all
 
 bonus: $(OBJECTS_BONUS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
+	@ar rcs $(NAME) $(OBJECTS_BONUS_PREFIXED)
 	@echo "Libft Bonus Done !"
 
 .PHONY: bonus all clean fclean re

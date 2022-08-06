@@ -6,14 +6,13 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 13:35:19 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/08/06 13:35:33 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/06 14:03:42 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list
-	*ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst)
 	{
@@ -23,4 +22,3 @@ t_list
 	}
 	return (lst);
 }
-Footer
