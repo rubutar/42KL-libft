@@ -6,7 +6,7 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 16:42:13 by rubutar           #+#    #+#             */
-/*   Updated: 2022/08/07 14:07:41 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:25:22 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,19 @@ char strupper_and_one(unsigned int id, char c) {
 	return (ft_toupper(c));
     }
 
-void striterifunc(unsigned int ids, char * st) {
-    printf("%s, %d", st, ids);
-    }
-    // if (id == 0) {
-	// 	return ('1');
-	// }
-	// return (ft_toupper(st[1]));
-    // }
+static void		iter(unsigned int i, char *c)
+{
+	static int indexArray[11] = {0};
+
+	if (i > 10 || indexArray[i] == 1)
+		write(1, "wrong index\n", 12);
+	else
+		indexArray[i] = 1;
+	if (*c >= 'a' && *c <= 'z')
+		*c = *c - 32;
+	else if (*c >= 'A' && *c <= 'Z')
+		*c = *c + 32;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -250,13 +255,15 @@ printf("________________________________________________________________________
     char *str_mapi_ft = NULL;
 
 	str_mapi_ft = ft_strmapi ("abcd", &strupper_and_one);
-    printf("%s", str_mapi_ft);
+    printf("%s \n", str_mapi_ft);
 
-    // char *str_iteri_ft = NULL;
+	char	* str9 = NULL;
 
-	// str_iteri_ft = ft_striteri ("abcd", (*striterifunc)(3, "efgh"));
-    // printf("%s", str_iteri_ft);
-
+	str9 = (char *)malloc(sizeof(*str9) * 12);
+	strcpy(str9, "LoReM iPsUm");
+	ft_striteri(str9, &iter);
+	printf(">> ft_striteri : %s", str9);
+	free(str9);
     printf("\n");
     printf("=====***** Part 2 -  strmapi, striteri =====*****\n\n\n");
 
