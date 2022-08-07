@@ -6,12 +6,11 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 16:36:56 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/08/06 09:19:57 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/07 16:59:57 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_str_count(char const *s, char c)
 {
@@ -46,7 +45,6 @@ int	ft_word_len(char const *s, char c, int i)
 	}
 	return (len);
 }
-
 
 char	**ft_split(char const *s, char c)
 {

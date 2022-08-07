@@ -6,53 +6,58 @@
 /*   By: rbutarbu <rbutarbu@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 22:26:59 by rbutarbu          #+#    #+#             */
-/*   Updated: 2022/08/06 10:18:00 by rbutarbu         ###   ########.fr       */
+/*   Updated: 2022/08/07 17:06:37 by rbutarbu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_abs(int nbr)
+int	ft_nbr_len(long n)
 {
-	return ((nbr < 0) ? -nbr : nbr);
-}
+	int	i;
 
-static void	ft_strrev(char *str)
-{
-	size_t	length;
-	size_t	i;
-	char	tmp;
-
-	length = ft_strlen(str);
-	i = 0;
-	while (i < length / 2)
+	i = 1;
+	if (n < 0)
 	{
-		tmp = str[i];
-		str[i] = str[length - i - 1];
-		str[length - i - 1] = tmp;
+		n *= -1;
 		i++;
 	}
+	while (n > 9)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
+}
+
+void	ft_conversion(long n, char *str, int *i)
+{
+	if (n > 9)
+	{
+		ft_conversion (n / 10, str, i);
+		ft_conversion (n % 10, str, i);
+	}
+	else
+		str[(*i)++] = n + '0';
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		is_neg;
-	size_t	length;
+	char	*result;
+	int		i;
+	long	number;
 
-	is_neg = (n < 0);
-	if (!(str = ft_calloc(11 + is_neg, sizeof(*str))))
-		return (NULL);
-	if (n == 0)
-		str[0] = '0';
-	length = 0;
-	while (n != 0)
+	number = n;
+	result = malloc(sizeof(char) * (ft_nbr_len(number) + 1));
+	if (!result)
+		return (0);
+	i = 0;
+	if (number < 0)
 	{
-		str[length++] = '0' + ft_abs(n % 10);
-		n = (n / 10);
+		result[i++] = '-';
+		number *= -1;
 	}
-	if (is_neg)
-		str[length] = '-';
-	ft_strrev(str);
-	return (str);
+	ft_conversion(number, result, &i);
+	result[i] = '\0';
+	return (result);
 }
